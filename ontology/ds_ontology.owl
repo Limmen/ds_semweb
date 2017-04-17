@@ -1,0 +1,844 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.limmen.kth.se/ontologies/ds_ontology#"
+     xml:base="http://www.limmen.kth.se/ontologies/ds_ontology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology">
+        <owl:versionIRI rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology/1.0.0"/>
+        <rdfs:comment>An ontology for distributed systems domain</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#problemEquivalent -->
+
+    <owl:ObjectProperty rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#problemEquivalent">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#Problem"/>
+        <rdfs:range rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#Problem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#reducible -->
+
+    <owl:ObjectProperty rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#reducible">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#solvable -->
+
+    <owl:ObjectProperty rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#solvable">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#Problem"/>
+        <rdfs:range rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#SystemModel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#usesComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#usesComponent">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#Algorithm"/>
+        <rdfs:range rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#Algorithm"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#AbstractComponent -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#AbstractComponent"/>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#AbstractSystemModel -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#AbstractSystemModel">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#SystemModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#Algorithm -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#Algorithm"/>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#AsynchronousSystem -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#AsynchronousSystem">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#AbstractSystemModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#AtomicBroadcast -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#AtomicBroadcast">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#Broadcast"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#BasicPaxos -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#BasicPaxos">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#Paxos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#BerkeleyAlgorithm -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#BerkeleyAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#TimeAndClocks"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#BestEffortBroadcast -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#BestEffortBroadcast">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#Broadcast"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#BitCoin -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#BitCoin">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#P2P"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#BitTorrent -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#BitTorrent">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#P2P"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#Broadcast -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#Broadcast">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#AbstractComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#BullyAlgorithm -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#BullyAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#LeaderElectionAlgorithms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#ByzantineGeneralsProblem -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#ByzantineGeneralsProblem">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#Problem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#ByzantinePaxos -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#ByzantinePaxos">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#Paxos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#CRDTS -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#CRDTS">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#Algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#CausalBroadcast -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#CausalBroadcast">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#Broadcast"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#ChandyLamportAlgorithm -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#ChandyLamportAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#GlobalState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#Chord -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#Chord">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#P2P"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#ChordSharp -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#ChordSharp">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#P2P"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#ChristiansAlgorithm -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#ChristiansAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#TimeAndClocks"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#ConcreteSystemModel -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#ConcreteSystemModel">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#SystemModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#Consensus -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#Consensus">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#Problem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#ConsensusAlgorithm -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#ConsensusAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#Algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#ConsistencyModel -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#ConsistencyModel"/>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#Cyclon -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#Cyclon">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#P2P"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#DKS -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#DKS">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#P2P"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#Detector -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#Detector">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#FailureDetector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#EventualConsistency -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#EventualConsistency">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#ConsistencyModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#EventualLeaderElection -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#EventualLeaderElection">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#LeaderElector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#EventuallyDetector -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#EventuallyDetector">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#FailureDetector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#EventuallyPerfectFailureDetector -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#EventuallyPerfectFailureDetector">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#FailureDetector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#EventuallyStrongFailureDetector -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#EventuallyStrongFailureDetector">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#FailureDetector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#EventuallyWeakFailureDetector -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#EventuallyWeakFailureDetector">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#FailureDetector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#FailNoisy -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#FailNoisy">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#ConcreteSystemModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#FailRecovery -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#FailRecovery">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#ConcreteSystemModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#FailSilent -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#FailSilent">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#ConcreteSystemModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#FailStop -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#FailStop">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#ConcreteSystemModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#FailureDetection -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#FailureDetection">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#Problem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#FailureDetector -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#FailureDetector">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#AbstractComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#FairLossLink -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#FairLossLink">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#Link"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#GlobalState -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#GlobalState">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#Algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#Gnutella -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#Gnutella">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#P2P"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#GroupCommunication -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#GroupCommunication">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#Algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#GroupMembership -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#GroupMembership">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#Problem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#ISIS -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#ISIS">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#MutualExclusion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#Kademlia -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#Kademlia">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#P2P"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#LamportClock -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#LamportClock">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#TimeAndClocks"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#LeaderElection -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#LeaderElection">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#LeaderElector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#LeaderElectionAlgorithms -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#LeaderElectionAlgorithms">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#Algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#LeaderElector -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#LeaderElector">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#AbstractComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#Linearizable -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#Linearizable">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#ConsistencyModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#Link -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#Link">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#AbstractComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#Logoot -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#Logoot">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#OperationBasedCRDT"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#MaekawasAlgorithm -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#MaekawasAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#MutualExclusion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#Mercury -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#Mercury">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#P2P"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#MessageBroadcast -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#MessageBroadcast">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#Problem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#MultiPaxos -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#MultiPaxos">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#Paxos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#MutualExclusion -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#MutualExclusion">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#Algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#Napster -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#Napster">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#P2P"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#NetworkTimeProtocol -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#NetworkTimeProtocol">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#TimeAndClocks"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#OR-Set -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#OR-Set">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#CRDTS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#OperationBased2P-Set -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#OperationBased2P-Set">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#OperationBasedCRDT"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#OperationBasedCRDT -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#OperationBasedCRDT">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#CRDTS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#Oscar -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#Oscar">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#P2P"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#P2P -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#P2P">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#Algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#PartiallySynchronousSystem -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#PartiallySynchronousSystem">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#AbstractSystemModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#Pastry -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#Pastry">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#P2P"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#Paxos -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#Paxos">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#ConsensusAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#PerfectFailureDetector -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#PerfectFailureDetector">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#FailureDetector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#PerfectLink -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#PerfectLink">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#Link"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#Problem -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#Problem"/>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#Raft -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#Raft">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#ConsensusAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#RegularConsistency -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#RegularConsistency">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#ConsistencyModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#ReliableBroadcast -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#ReliableBroadcast">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#Broadcast"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#RicartAgrawal -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#RicartAgrawal">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#MutualExclusion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#SequenceConsensus -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#SequenceConsensus">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#Consensus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#SequentialConsistency -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#SequentialConsistency">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#ConsistencyModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#SingleValueRegularConsensus -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#SingleValueRegularConsensus">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#Consensus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#SingleValueUniformConsensus -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#SingleValueUniformConsensus">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#Consensus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#StateBased2P-Set -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#StateBased2P-Set">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#StateBasedCRDT"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#StateBasedCRDT -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#StateBasedCRDT">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#CRDTS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#StrongFailureDetector -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#StrongFailureDetector">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#FailureDetector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#StubbornLink -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#StubbornLink">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#Link"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#SynchronousSystem -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#SynchronousSystem">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#AbstractSystemModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#SystemModel -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#SystemModel"/>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#TMan -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#TMan">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#P2P"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#TimeAndClocks -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#TimeAndClocks">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#Algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#TotalOrderBroadcast -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#TotalOrderBroadcast">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#Broadcast"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#Treedoc -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#Treedoc">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#OperationBasedCRDT"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#TwoGeneralsProblem -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#TwoGeneralsProblem">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#Problem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#UniformSequenceConsensus -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#UniformSequenceConsensus">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#Consensus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#VectorClock -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#VectorClock">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#TimeAndClocks"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#ViewSynchronousGroupCommunication -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#ViewSynchronousGroupCommunication">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#GroupCommunication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#WeakFailureDetector -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#WeakFailureDetector">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#FailureDetector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#ZAB -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#ZAB">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#ConsensusAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#2PhaseCommit -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#2PhaseCommit">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#ConsensusAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#3PhaseCommit -->
+
+    <owl:Class rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#3PhaseCommit">
+        <rdfs:subClassOf rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#ConsensusAlgorithm"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
