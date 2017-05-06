@@ -155,11 +155,6 @@ do_reducible(P1, P2):-
     rdf(P1, 'http://www.limmen.kth.se/ontologies/ds_ontology#reducibleTo', P3),
     reducible(P3, P2).
 
-%%reducible(P1, P2, Seen):-
-%%rdf(P1, 'http://www.limmen.kth.se/ontologies/ds_ontology#problemEquivalent', P3),
-%%    \+ member(P3, Seen),
-%%    reducible(P3, P2, [P1|Seen]).
-
 %% True if algorithm A can be used to solve problem P
 %% algorithm_can_solve(+-, +-).
 %% algorithm_can_solve(A,P).
