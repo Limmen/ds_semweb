@@ -10,6 +10,7 @@ A simple ontology and reasoner for distributed systems theory.
 
     ?- ['ds_reasoner'].
 
+<<<<<<< HEAD
     ?-  setof(X, reducible('http://www.limmen.kth.se/ontologies/ds_ontology#EventuallyWeakFailureDetector', X), Y).
     Y = ['http://www.limmen.kth.se/ontologies/ds_ontology#Detector',
          'http://www.limmen.kth.se/ontologies/ds_ontology#EventualLeaderElector',
@@ -21,6 +22,15 @@ A simple ontology and reasoner for distributed systems theory.
          'http://www.limmen.kth.se/ontologies/ds_ontology#PerfectFailureDetector',
          'http://www.limmen.kth.se/ontologies/ds_ontology#StrongDetector',
          'http://www.limmen.kth.se/ontologies/ds_ontology#WeakFailureDetector'].
+=======
+    ?- run_tests.
+    
+    ?- ?- reducible('http://www.limmen.kth.se/ontologies/ds_ontology#EventuallyWeakFailureDetector', X).
+       X = 'http://www.limmen.kth.se/ontologies/ds_ontology#EventualLeaderElector' ;
+       X = 'http://www.limmen.kth.se/ontologies/ds_ontology#EventuallyPerfectFailureDetector' ;
+       X = 'http://www.limmen.kth.se/ontologies/ds_ontology#WeakFailureDetector' ;
+       false.
+>>>>>>> 43fc82f5ebc14ceec82b297f272745f60251f3d3
 
 ## Author
 
