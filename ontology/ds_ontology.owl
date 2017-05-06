@@ -1198,9 +1198,9 @@
     
 
 
-    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#MonarchicalEventualLeaderDetection -->
+    <!-- http://www.limmen.kth.se/ontologies/ds_ontology#MonarchicalEventualLeaderElection -->
 
-    <owl:NamedIndividual rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#MonarchicalEventualLeaderDetection">
+    <owl:NamedIndividual rdf:about="http://www.limmen.kth.se/ontologies/ds_ontology#MonarchicalEventualLeaderElection">
         <rdf:type rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#EventualLeaderElectionAlgorithm"/>
         <implementableIn rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#FailNoisy"/>
         <implements rdf:resource="http://www.limmen.kth.se/ontologies/ds_ontology#EventualLeaderElector"/>
