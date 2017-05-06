@@ -123,28 +123,42 @@ equivalent_model(M1, M2):-
     rdf(M2, 'http://www.limmen.kth.se/ontologies/ds_ontology#strongerModel', M1).
 
 %% True if problem P1 is reducible to problem P2
-%% solvable(+-, +-).
-%% solvable(P1,P2).
+%% reducible(+-, +-).
+%% reducible(P1,P2).
 reducible(P1, P2):-
-    reducible(P1, P2, [P1,P2]).
+    do_reducible(P1, P2).
+
+reducible(P1, P2):-
+    findall(X, rdf(P1, 'http://www.limmen.kth.se/ontologies/ds_ontology#problemEquivalent', X), L),
+    reducible_equiv(L, P2).
+
+%% True if any problem in list L is reducible to problem P2
+%% reducible_equiv(+, +).
+%% reducible_equiv(L,P2).
+reducible_equiv([H|_], P2):-
+    do_reducible(H, P2).
+
+reducible_equiv([H|T], P2):-
+    \+ do_reducible(H, P2),
+    reducible_equiv(T, P2).
 
 %% True if problem P1 is reducible to problem P2.
-%% Maintains cache Seen to avoid infinite loop in case of cyclic relations.
-%% reducible(+-, +-, +).
-%% reducible(P1,P2, Seen).
-reducible(P1, P2, _):-
+%% do_reducible(+-, +-, +).
+%% do_reducible(P1,P2, Seen).
+do_reducible(P1, P2):-
     rdf(P1, 'http://www.limmen.kth.se/ontologies/ds_ontology#problemEquivalent', P2).
 
-reducible(P1, P2, _):-
+do_reducible(P1, P2):-
     rdf(P1, 'http://www.limmen.kth.se/ontologies/ds_ontology#reducibleTo', P2).
 
-reducible(P1, P2, Seen):-
-    (rdf(P1, 'http://www.limmen.kth.se/ontologies/ds_ontology#reducibleTo', P3)
-    ;
-     rdf(P1, 'http://www.limmen.kth.se/ontologies/ds_ontology#problemEquivalent', P3)
-    ),
-    \+ member(P3, Seen),
-    reducible(P3, P2, [P3|Seen]).
+do_reducible(P1, P2):-
+    rdf(P1, 'http://www.limmen.kth.se/ontologies/ds_ontology#reducibleTo', P3),
+    reducible(P3, P2).
+
+%%reducible(P1, P2, Seen):-
+%%rdf(P1, 'http://www.limmen.kth.se/ontologies/ds_ontology#problemEquivalent', P3),
+%%    \+ member(P3, Seen),
+%%    reducible(P3, P2, [P1|Seen]).
 
 %% True if algorithm A can be used to solve problem P
 %% algorithm_can_solve(+-, +-).
