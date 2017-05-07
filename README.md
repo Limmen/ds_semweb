@@ -8,8 +8,14 @@ A simple ontology and reasoner for distributed systems theory.
 
     $ swipl
 
-    ?- ['ds_reasoner'].
-
+    ?- [ds_reasoner].
+    % Parsed "ds_ontology.owl" in 0.01 sec; 612 triples
+    true.
+    ?- run_tests(ds_reasoner).
+    % PL-Unit: ds_reasoner 
+    done
+    % All 6 tests passed
+    true.    
     ?-  setof(X, reducible('http://www.limmen.kth.se/ontologies/ds_ontology#EventuallyWeakFailureDetector', X), Y).
     Y = ['http://www.limmen.kth.se/ontologies/ds_ontology#Detector',
          'http://www.limmen.kth.se/ontologies/ds_ontology#EventualLeaderElector',
