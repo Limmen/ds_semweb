@@ -62,7 +62,7 @@ function handleAbort() {
 }
 
 function handleDestroy() {
-    console.log("destroy, id: " + this.id);
+    connectedUpdate("no");
 }
 let cons;
 let variables;
@@ -95,6 +95,7 @@ class App extends Component {
             <div className="app-component">
                 <div className="col-sm-2"/>
                 <div className="col-sm-8">
+                    <p><span className="connected-label">Ontology: </span><a href="ontology/ds_ontology.owl">Click to download</a></p>
                     <p><span className="connected-label">Connected: </span> {this.props.connected}</p>
                     <Console ref="console" handler={this.eval.bind(this)} autofocus={true}/>
                 </div>
