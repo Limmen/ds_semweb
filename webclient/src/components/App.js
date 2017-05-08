@@ -93,13 +93,13 @@ class App extends Component {
         connectedUpdate = this.props.connectedUpdate;
         return (
             <div className="app-component">
-                <div className="col-sm-2"/>
-                <div className="col-sm-8">
+                <div className="col-sm-3"/>
+                <div className="col-sm-6">
                     <p><span className="connected-label">Ontology: </span><a href="ontology/ds_ontology.owl">Click to download</a></p>
                     <p><span className="connected-label">Connected: </span> {this.props.connected}</p>
                     <Console ref="console" handler={this.eval.bind(this)} autofocus={true}/>
                 </div>
-                <div className="col-sm-2"/>
+                <div className="col-sm-3"/>
             </div>
         );
     }
